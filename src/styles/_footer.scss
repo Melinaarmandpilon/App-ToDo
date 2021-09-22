@@ -1,0 +1,16 @@
+.footer{
+    height: 3rem;
+    padding: auto;
+    margin-top: 1.5rem;
+    border-radius: .3125rem;
+    box-shadow: $shadow;
+    background-color: var(--color-C);
+    
+    &_btn{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+     justify-content: space-around;
+       
+    }
+}

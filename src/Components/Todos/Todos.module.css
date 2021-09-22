@@ -1,0 +1,25 @@
+
+.task{
+  display: flex;
+  align-items: colums;
+  
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.descripcion {
+
+  font-family: "Josefin Sans", cursive;
+  font-size: 18px;
+  width: 50%;
+  background-color: hsl(235, 24%, 19%);
+  border: 1px solid hsl(234, 39%, 85%);
+  border-radius: 0.25rem;
+  border-top: inherit;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.btn {
+  border-radius: 10%;
+}

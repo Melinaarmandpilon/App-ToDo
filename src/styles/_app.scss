@@ -1,0 +1,40 @@
+.themeContainer {
+  background-image: url("../images/bg-desktop-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  max-width: 100%;
+  height: 15.5rem;
+  padding: 1.25rem;
+
+  // @include media-query(desktop) {
+  //   height: 18.75rem;
+  // }
+ 
+}
+
+.wrapper{ 
+  max-width: 33.75rem;
+  min-height: 31.25rem;
+  margin: 0 auto;
+}
+
+.parrafo {
+    margin-top: 10px auto;
+    padding-top: 15px;
+
+    p {
+      font-family: $font-family;
+      text-align:center;
+      font-size: $F-size-p;
+      color: var(--color-btn);
+    }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+

@@ -1,0 +1,13 @@
+body {
+  background-color: #000000;
+  color: white;
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+p {
+  font-size: rem(14);
+}
+/*# sourceMappingURL=index.css.map */
