@@ -6,7 +6,6 @@ export default function AddTodo() {
   const dispatch = useDispatch();
   const [task, setTask] = useState("");
   
-
   function handleChange(e) {
     // console.log("e.target.value", e.target.value);
     setTask(e.target.value);
@@ -21,22 +20,22 @@ export default function AddTodo() {
   }
 
   return (
-
+   
     <form className="todo" onSubmit={handleSubmit}>
-      <div className="todo__check">
-        <input type="checkbox" aria-checked disabled />
-      </div>
-      <div className="todo__input-container">
-        <input
-          className="todo__input-container todo-input"  
+      
+      <input type="checkbox"  disabled />
+     
+      <input
+        className="todo__input-container"
           type="text"
           value={task}
           placeholder="Create a new todo"
           onChange={handleChange}
-          
-        />
-      </div>
+      />
+      
     </form>
+
+
   );
 }
 

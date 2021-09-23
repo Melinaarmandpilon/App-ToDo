@@ -3,8 +3,9 @@
   background-repeat: no-repeat;
   background-size: cover; 
   max-width: 100%;
-  height: 15.5rem;
-  padding: 1.25rem;
+  height: 18rem;
+  
+  padding: 3rem;
 
   // @include media-query(desktop) {
   //   height: 18.75rem;
@@ -13,15 +14,13 @@
 }
 
 .wrapper{ 
-  max-width: 33.75rem;
+  max-width: 35rem;
   min-height: 31.25rem;
   margin: 0 auto;
 }
 
 .parrafo {
-    margin-top: 10px auto;
-    padding-top: 15px;
-
+    padding-top: 30px;
     p {
       font-family: $font-family;
       text-align:center;

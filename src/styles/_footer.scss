@@ -1,16 +1,17 @@
 .footer{
-    height: 3rem;
-    padding: auto;
-    margin-top: 1.5rem;
-    border-radius: .3125rem;
+ 
+    border-radius: 0.7rem;
     box-shadow: $shadow;
-    background-color: var(--color-C);
+    background-color: var(--color-bgtask);
     
     &_btn{
+        font-size: $F-size-btn;
+        color: var(--color-value);
+        font-family: $font-family;
+        font-weight: 700;
         height: 3rem;
         display: flex;
         align-items: center;
-     justify-content: space-around;
-       
+        justify-content: space-around;
     }
 }

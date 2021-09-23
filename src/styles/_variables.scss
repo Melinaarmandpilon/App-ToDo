@@ -1,54 +1,58 @@
+//----Typography-----
+
 $font-family:"Josefin Sans", sans-serif;
-$F-size-title: 1.125rem; //25/16px
-$F-size-p: 0.875rem;
-$F-size-input: 0.875rem;
-$F-size-btn: 0.8rem;
+$F-size-title: 35px;
+$F-size-p: 16px;
+$F-size-input:16px;
+$F-size-btn: 16;
 $c-primary:hsl(220, 98%, 61%); //hover botones All, completed, clear completer
+$Weight400: 400;
+$Weight700: 700;
 
-// ==>> Shadow
-$shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.158);
+//Sombras
+$shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
 
-$check-background: linear-gradient( hsl(192, 100%, 67%), hsl(280, 87%, 65%));//CKECKBOX
+//---- Color de fondo Ckeckbox
+$check-background: linear-gradient( hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
 //Los diseños se crearon con los siguientes anchos:
 $Mobile: 375px;
 $Desktop: 1440px;
 
-
 :root{
 
     //Colors Light Theme
     --color-light-t:hsl(0, 0%, 98%); //TITULO NAV///fondo de componente task
-    --color-light-bg2: hsl(236, 33%, 92%); //fondo body
-    --color-light-bg: hsl(233, 11%, 84%); //fondo body
+    --color-light-bgbody: hsl(236, 33%, 92%); 
+    --color-light-i: hsl(233, 11%, 84%); 
     --color-light-btn: hsl(236, 9%, 61%); // botones All, completed, clear completer,count y p
-    --color-light-i: hsl(235, 19%, 35%); //letra de input
+    --color-light-i2: hsl(235, 19%, 35%); //letra de input
     
     //Colors Dark Theme
-    --color-Dark-bg: hsl(235, 21%, 11%); //fondo body
-    --color-Dark-comp-list: hsl(235, 24%, 19%);
-    --color-Dark-t:hsl(0, 0%, 98%);//TITULO NAV
-    --color-Dark-4: hsl(234, 39%, 85%);
-    --c-Dark-hover: hsl(236, 33%, 92%);
+    --color-Dark-bgbody: hsl(235, 21%, 11%); 
+    --color-Dark-t:hsl(0, 0%, 98%);
+    --color-Dark-bgtask: hsl(235, 24%, 19%);
     --color-Dark-i: hsl(234, 11%, 52%);
+    --color-Dark-btn: hsl(234, 39%, 85%);
+    --c-Dark-hover: hsl(236, 33%, 92%);
     --c-Dark-5: hsl(233, 14%, 35%);
     --c-Dark-6: hsl(237, 14%, 26%);
 
 }
 
 .light-theme{
-    --color-bg:var(--color-light-bg2);
-    --color-t:var( --color-light-t);
-    --color-C:var(--color-light-t);
-    --color-i:var(--color-light-i); 
+    --color-bgbody:var(--color-light-bgbody);
+    --color-title:var( --color-light-t);
+    --color-bgtask:var(--color-light-t);
+    --color-value:var(--color-light-btn); 
     --color-btn:var(--color-light-btn); 
 }
 
-body.dark-theme{
-    --color-bg:var(--color-Dark-bg);
-    --color-t:var(--color-Dark-t);
-    --color-C:var(--color-Dark-comp-list);
-    --color-i:var(--color-Dark-t);
-    --color-btn:var(--color-Dark-4); 
+.dark-theme{
+    --color-bgbody:var(--color-Dark-bgbody);
+    --color-title:var(--color-Dark-t);
+    --color-bgtask:var(--color-Dark-bgtask);
+    --color-value:var(--color-Dark-btn);
+    --color-btn:var(--color-Dark-btn); 
 }
 

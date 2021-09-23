@@ -2,30 +2,33 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeTodo, completedTodo } from "../../actions/index";
 import icon from "../../images/icon-cross.svg";
-// import styles from "./Todos.module.css"
 
 export default function Todos() {
   const filterList = useSelector((state) => state.filterList);
-  
+
   // const mapStateToProps = (state) => ({
   //   filterList: state.filterList
   // });
   const dispatch = useDispatch();
-  // console.log("todos",todos)
+
   return (
     <div className="todos">
       {filterList?.map((task) => (
-        <div key={task.id} className="todos__input-container">
-          <div className="todos_check">
-          <input
-            type="checkbox"
-            onClick={() => dispatch(completedTodo(task.id))}
-          />
-          <label className="todos__description">{task.descripcion}</label>
+        <div key={task.id}>
+          <div className="todos__input-container">
+            <div className="todos__input-container_check">
+              <input
+                type="checkbox"
+                onClick={() => dispatch(completedTodo(task.id))}
+              />
+              <div>
+                <label>{task.descripcion}</label>
+              </div>
+            </div>
+            <button onClick={() => dispatch(removeTodo(task.id))}>
+              <img src={icon} alt="delete" />
+            </button>
           </div>
-          <button onClick={() => dispatch(removeTodo(task.id))}>
-            <img src={icon} alt="delete" />
-          </button>
         </div>
       ))}
     </div>
@@ -48,7 +51,6 @@ export default function Todos() {
 //     </div>
 //   );
 // };
-
 
 // export default connect(mapStateToProps, { removeTodo })(
 //   Todos

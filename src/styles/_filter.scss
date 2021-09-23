@@ -1,12 +1,9 @@
 .button {
-    display: flex;
-    align-items: center;
-    border-bottom: none;
     border: none;
     background-color: transparent;
     cursor: pointer;
     font-size: $F-size-btn;
-    color: var(--color-i);
+    color: var(--color-value);
     font-family: $font-family;
     font-weight: 700;
     
