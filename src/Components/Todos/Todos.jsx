@@ -6,34 +6,37 @@ import icon from "../../images/icon-cross.svg";
 export default function Todos() {
   const filterList = useSelector((state) => state.filterList);
 
-  // const mapStateToProps = (state) => ({
-  //   filterList: state.filterList
-  // });
   const dispatch = useDispatch();
 
   return (
-    <div className="todos">
-      {filterList?.map((task) => (
-        <div key={task.id}>
-          <div className="todos__input-container">
-            <div className="todos__input-container_check">
+    <section className="todos">
+      <div >
+        {filterList?.map((task) => (
+          <div key={task.id} draggable="true" className="todos_task">
+            
+            <div className="addtodo_check">
               <input
-                type="checkbox"
+               type="checkbox"
+               id={task.id}
                 onClick={() => dispatch(completedTodo(task.id))}
+                checked={task.completed === true ? true : false}
               />
-              <div>
-                <label>{task.descripcion}</label>
-              </div>
+              <label  >{task.descripcion}</label>
             </div>
-            <button onClick={() => dispatch(removeTodo(task.id))}>
-              <img src={icon} alt="delete" />
-            </button>
+              <div className="todos_delete">
+              <button onClick={() => dispatch(removeTodo(task.id))}>
+                <img src={icon} alt="delete" />
+              </button>
+              </div>
+            
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 }
+
+//----------UTILIZANDO CONNECT------------------------
 
 // export const Todos = ({ filterList,removeTodo }) => {
 
@@ -51,6 +54,10 @@ export default function Todos() {
 //     </div>
 //   );
 // };
+
+// const mapStateToProps = (state) => ({
+//   filterList: state.filterList
+// });
 
 // export default connect(mapStateToProps, { removeTodo })(
 //   Todos

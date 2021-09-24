@@ -1,66 +1,62 @@
 .todos{
     margin-top: 35px; 
-    // flex-direction: column;
-
-    &__input-container{
-        display: flex;
-        justify-content: space-between;
+  
+    
+    &_task{
+        display: flex; 
         min-height: 3rem;
-        border-bottom: 0.1px solid var(--color-btn);
-        border-radius: 0.7rem;
+        border-bottom: 0.2px solid var(--color-btn);
+        border-radius: 0.3rem;
         background-color: var(--color-bgtask);
         color: var(--color-value);
-        &_check{
-            display: flex;
-            align-items: center;
-            label {
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_delete {
+        button{
+            background-color: transparent;
+            border: none;
+            margin-right: 1.5rem;
+            
+            img {
+                width: 0.9rem;
+                height: 0.9rem;
                 cursor: pointer;
-                font-weight: $Weight700;
-                
             }
         }
     }
 
-    button {
-        background-color: transparent;
-        border: none;
-        margin-right: 1.5rem;
-        text-align: right;
-
-            img {
-            width: 0.8rem;
-            height: 0.8rem;
-            cursor: pointer;
-            }
-    }
 }
-
+    
 
 input[type="checkbox"] {
     -webkit-appearance: none;
-    min-width: 1.3rem;
-    min-height: 1.3rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
     border-radius: 100%;
     background-color: transparent;
-    border: 1px solid hsla(0, 0%, 59%, 0.363);
+    border: 1px solid var(--color-value);
     cursor: pointer;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     &:checked {
         content: url("../images/icon-check.svg");
         width: 1em;
         background: $check-background;
+        transition: 0.1s ease-in-out;
+    
     }
     
     &:hover {
         border: 0.03rem solid #c058f3;
-        transition: 0.2s ease-in-out;
+        transition: 0.1s ease-in-out;
     }
-}
 
+}
 input[type="checkbox"]:checked + label {
     transition: 1s linear;
     color: var(--color-i);
     text-decoration: line-through;
-   
 }
- 

@@ -6,18 +6,15 @@ import "./styles/styles.scss";
 
 function App() {
   return (
-    <main className="themeContainer">
-      
-      <div className="wrapper">
+    <main className="appThemeContainer">
+      <div className="appWrapper">
         <Navbar />
         <AddTodo />
         <Todos />
         <Footer />
-     
-        <div className="parrafo">
+        <div className="appParrafo">
           <p>Drag and drop to reorder list</p>
         </div>
-        
       </div>
     </main>
   );

@@ -1,17 +1,48 @@
 .footer{
- 
     border-radius: 0.7rem;
-    box-shadow: $shadow;
-    background-color: var(--color-bgtask);
-    
+    // box-shadow: $shadow;
+    // background-color: var(--color-bgtask);
+    font-size: $F-size-btn;
+
+    &_menu{
+        border-bottom: 0.2px solid var(--color-btn);
+        justify-content: space-between;
+        padding: 0rem 1.25rem;
+        border-radius: .3125rem;
+        background-color: var(--color-bgtask);
+        height: 3rem;
+        align-items: center;
+        box-shadow: $shadow;
+       
+        }
+
     &_btn{
         font-size: $F-size-btn;
         color: var(--color-value);
         font-family: $font-family;
         font-weight: 700;
-        height: 3rem;
         display: flex;
-        align-items: center;
         justify-content: space-around;
     }
+    &_inf{
+    margin-top: 1.25rem;
+    border-radius: .3125rem;
+    justify-content: space-around;
+    box-shadow: $shadow;
+      
+    }
 }
+
+.mobile {
+  display: none; //para cuando pase a desktop no aparezcan los botones
+  @include media-query(mobile) {
+    display: flex;
+  }
+}
+
+.desktop {
+  display: flex;
+    @include media-query(mobile) {
+      display: none;
+    }
+  }

@@ -10,7 +10,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const body = document.querySelector("body");
-    const container = document.querySelector(".themeContainer");//imagen
+    const container = document.querySelector(".appThemeContainer");//imagen
     if (theme) {
       body.classList.remove("light-theme"); //clase que tiene mi body
       body.classList.add("dark-theme");
@@ -30,7 +30,7 @@ export default function Navbar() {
         <nav className="nav">
           
           <div className="nav_title">
-            <h1>todo list</h1>
+            <h1>todo</h1>
           </div>
 
           <div>

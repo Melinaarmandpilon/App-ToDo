@@ -1,30 +1,56 @@
-.todo{
+.addtodo{
+    max-width: 100%;
+    min-height: 4.25rem;
     display: flex;
     align-items: center;
-    border-radius: 0.7rem;
-    background-color: var(--color-bgtask);
-    height: 4rem;
-    box-shadow: $shadow;
-    
+   
+   &_form{
+        margin-top: 1.5rem;
+       background-color: var(--color-bgtask);
+       flex: 1;
+       max-width: 100%;
+       height: 3.5rem;
+       border-radius: 0.35rem;
+       box-shadow: $shadow;
+       display: flex;
+       align-items: center;
+
+       @include media-query(mobile) {
+        height: 2.9rem;
+      }
+    }
+
+    &_check {// clase que se utiliza en componente Todos para que herede todas estas propiedades
+      
+        margin: 0rem 1.25rem;
+        display: flex;
+        align-items: center;
+        
+        label {
+            font-size: $F-size-input;
+            margin-left: 1rem;
+            padding: 0.625rem 0rem;
+            cursor: pointer;
+        }
+        
+    }
+
     &__input-container {
-        font-family: $font-family;
+        border: none;
+        height: 100%;
+        width: 100%;
         font-size: $F-size-input;
         font-weight: $Weight700;
-       
-        border: none;
         background-color: var(--color-bgtask);
-        color: var(--color-value);
-        position: relative;
         border-radius: 0.7rem;
        
-        &:focus {
+        &:focus { // para que no se ponga el borde al ingresar data en el input
             outline: none;
         }
-    
     }
-    
 }
 
+
 input[type="checkbox"]{
-    margin: 15px;
+    margin: 10px;
 }

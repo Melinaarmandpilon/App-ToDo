@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 export default function AddTodo() {
   const dispatch = useDispatch();
   const [task, setTask] = useState("");
-  
+
   function handleChange(e) {
     // console.log("e.target.value", e.target.value);
     setTask(e.target.value);
@@ -20,22 +20,23 @@ export default function AddTodo() {
   }
 
   return (
-   
-    <form className="todo" onSubmit={handleSubmit}>
-      
-      <input type="checkbox"  disabled />
-     
-      <input
-        className="todo__input-container"
+    <section className="addtodo">
+      <form className="addtodo_form" onSubmit={handleSubmit}>
+        <div className="addtodo_check">
+          <input 
+          // className="addtodo_input"
+          type="checkbox"
+          disabled />
+        </div>
+        <input
+          className="addtodo__input-container"
           type="text"
           value={task}
           placeholder="Create a new todo"
           onChange={handleChange}
-      />
-      
-    </form>
-
-
+        />
+      </form>
+    </section>
   );
 }
 

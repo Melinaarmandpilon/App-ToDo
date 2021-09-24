@@ -1,10 +1,11 @@
 //----Typography-----
 
 $font-family:"Josefin Sans", sans-serif;
-$F-size-title: 35px;
-$F-size-p: 16px;
-$F-size-input:16px;
-$F-size-btn: 16;
+$F-size-title-d: 40px;
+$F-size-title-m: 25px;
+$F-size-p: 14px;
+$F-size-input:13px;
+$F-size-btn: 14;
 $c-primary:hsl(220, 98%, 61%); //hover botones All, completed, clear completer
 $Weight400: 400;
 $Weight700: 700;
@@ -16,8 +17,8 @@ $shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
 $check-background: linear-gradient( hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
 //Los diseños se crearon con los siguientes anchos:
-$Mobile: 375px;
-$Desktop: 1440px;
+$Mobile: 600px;//;
+$Desktop: 1440px;//;
 
 :root{
 
@@ -53,6 +54,6 @@ $Desktop: 1440px;
     --color-title:var(--color-Dark-t);
     --color-bgtask:var(--color-Dark-bgtask);
     --color-value:var(--color-Dark-btn);
-    --color-btn:var(--color-Dark-btn); 
+    --color-btn:var(--c-Dark-5); 
 }
 
