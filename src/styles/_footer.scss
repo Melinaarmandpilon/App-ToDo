@@ -2,7 +2,7 @@
     border-radius: 0.7rem;
     // box-shadow: $shadow;
     // background-color: var(--color-bgtask);
-    font-size: $F-size-btn;
+    // font-size: $F-size-btn;
 
     &_menu{
         border-bottom: 0.2px solid var(--color-btn);
@@ -16,20 +16,15 @@
        
         }
 
-    &_btn{
-        font-size: $F-size-btn;
-        color: var(--color-value);
-        font-family: $font-family;
-        font-weight: 700;
-        display: flex;
-        justify-content: space-around;
-    }
     &_inf{
+      flex: 11 1;
     margin-top: 1.25rem;
     border-radius: .3125rem;
-    justify-content: space-around;
-    box-shadow: $shadow;
-      
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // justify-content: space-around;
+    box-shadow: $shadow;  
     }
 }
 
@@ -45,4 +40,9 @@
     @include media-query(mobile) {
       display: none;
     }
+  }
+
+  .contacts{
+    display: inline;
+    justify-content: space-between;
   }

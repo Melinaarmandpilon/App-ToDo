@@ -1,4 +1,5 @@
 import AddTodo from "./Components/AddTodo/AddTodo";
+
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/NavBar/Navbar";
 import Todos from "./Components/Todos/Todos";

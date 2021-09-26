@@ -5,6 +5,7 @@ import All from "../Filters/All";
 import Completed from "../Filters/Completed";
 import Clearcompleted from "../Filters/Clearcompleted";
 import Count from "../Count/Count";
+import Contacto from "../contacto/Contacto";
 
 export default function Footer() {
   return (
@@ -19,6 +20,9 @@ export default function Footer() {
         <Active />
         <Completed />
       </div>
+      <div className=" mobile">
+        <Contacto/>
+      </div>
       {/* // desktop */}
       <div className="footer_menu desktop">
         <Count />
@@ -26,6 +30,9 @@ export default function Footer() {
         <Active />
         <Completed />
         <Clearcompleted />
+      </div>
+      <div className=" desktop">
+      <Contacto/>
       </div>
     </div>
   );
