@@ -2,62 +2,32 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeTodo, completedTodo } from "../../actions/index";
 import icon from "../../images/icon-cross.svg";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-export default function Todos() {
+export default function Todos(props) {
   const filterList = useSelector((state) => state.filterList);
-
   const dispatch = useDispatch();
 
   return (
-        <DragDropContext>
     <section className="todos">
-      <div>
-          <Droppable droppableId="filterList">
-            {(provided) => (
-              <ul
-              {...provided.droppableProps} 
-              ref={provided.innerRef}
-              >
-                {filterList?.map((task, index) => (
-                    <Draggable
-                      key={task.id}
-                      draggableId={task.id}
-                      index={index}
-                    >
-                      {(provided) => (
-                        <li
-                          className="todos_task"
-                          {...provided.draggableProps}
-                          ref={provided.innerRef}
-                          {...provided.dragHandleProps}
-                        >
-                            <div className="addtodo_check">
-                              <input
-                                type="checkbox"
-                                id={task.id}
-                                onClick={() => dispatch(completedTodo(task.id))}
-                                checked={task.completed === true ? true : false}
-                              />
-                              <label>{task.descripcion}</label>
-                            </div>
-                            <div className="todos_delete">
-                              <button
-                                onClick={() => dispatch(removeTodo(task.id))}>
-                                <img src={icon} alt="delete" />
-                              </button>
-                            </div>
-                        </li>
-                      )}
-                    </Draggable>
-                ))}
-                {provided.placeholder}
-              </ul>
-            )}
-          </Droppable>
-      </div>
+      {filterList?.map((task) => (
+        <div className="todos_task" draggable="true">
+          <div className="addtodo_check">
+            <input
+              type="checkbox"
+              id={task.id}
+              onClick={() => dispatch(completedTodo(task.id))}
+              checked={task.completed === true ? true : false}
+            />
+            <label>{task.descripcion}</label>
+          </div>
+          <div className="todos_delete">
+            <button onClick={() => dispatch(removeTodo(task.id))}>
+              <img src={icon} alt="delete" />
+            </button>
+          </div>
+        </div>
+      ))};
     </section>
-        </DragDropContext>
   );
 }
 
