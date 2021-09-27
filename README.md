@@ -1,4 +1,4 @@
-# Frontend Mentor - Todo app
+# Todo app
 Esta es una solución al desafío de [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). 
 
 ### El reto
