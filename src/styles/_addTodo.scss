@@ -31,6 +31,8 @@
             margin-left: 1rem;
             padding: 0.625rem 0rem;
             cursor: pointer;
+            color: var(--color-value);
+            font-weight: 700;
         }
         
     }
@@ -42,6 +44,7 @@
         font-size: $F-size-input;
         font-weight: $Weight700;
         background-color: var(--color-bgtask);
+        color: var(--color-value);
         border-radius: 0.7rem;
        
         &:focus { // para que no se ponga el borde al ingresar data en el input

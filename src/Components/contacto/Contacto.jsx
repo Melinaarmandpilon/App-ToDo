@@ -7,12 +7,12 @@ export default function Contacto() {
     <div className="footer_menu footer_inf">
       <div>
         <a href="https://www.linkedin.com/in/melinaarmandpilon/">
-          <IoLogoLinkedin style={{ width: "25px", height: "25px" }} />
+          <IoLogoLinkedin style={{ width: "35px", height: "35px"}} />
         </a>
       </div>
       <div >
         <a href="https://github.com/Melinaarmandpilon">
-          <FiGithub style={{ width: "25px", height: "25px" }} />
+          <FiGithub style={{ width: "30px", height: "30px"}} />
         </a>
       </div>
     </div>

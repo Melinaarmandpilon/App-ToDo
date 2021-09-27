@@ -3,6 +3,7 @@
   
     
     &_task{
+        word-break: break-all; //para que no se salga del contenedor
         display: flex; 
         min-height: 3rem;
         border-bottom: 0.2px solid var(--color-btn);
